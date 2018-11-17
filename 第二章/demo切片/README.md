@@ -1,0 +1,1 @@
+1.slice(start,stop,step) 返回切片对象
