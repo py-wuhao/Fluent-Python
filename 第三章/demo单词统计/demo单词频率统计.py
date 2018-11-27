@@ -15,7 +15,7 @@ with open(sys.argv[1], encoding='utf-8') as fp:
             # occurrences = index.get(word, [])
             # occurrences.append(location)
             # index[word] = occurrences
-            # 在下面index.setdefault 返回的是列表 怎么添加到字典的？？？？
+            # 把单词和一个空列表放进映射，然后返回这个空列表
             index.setdefault(word, []).append(location)
             print('abc')
 # 以字母顺序打印出结果
