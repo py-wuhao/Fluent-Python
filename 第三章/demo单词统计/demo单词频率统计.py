@@ -15,9 +15,8 @@ with open(sys.argv[1], encoding='utf-8') as fp:
             # occurrences = index.get(word, [])
             # occurrences.append(location)
             # index[word] = occurrences
-            # 把单词和一个空列表放进映射，然后返回这个空列表
-            index.setdefault(word, []).append(location)
-            print('abc')
+            temp = index.setdefault(word, [])
+            temp.append(location)
 # 以字母顺序打印出结果
 for word in sorted(index, key=str.upper):  # str.upper 是方法的引用
     print(word, index[word])
