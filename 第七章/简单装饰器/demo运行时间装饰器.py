@@ -3,7 +3,7 @@ import time
 
 
 def clock(func):
-    @functools.wraps
+    @functools.wraps(func)
     def clocked(*args, **kwargs):
         t0 = time.perf_counter()
         result = func(*args, **kwargs)
